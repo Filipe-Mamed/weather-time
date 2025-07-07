@@ -1,0 +1,1 @@
+export * from "./Global.Styled.Image/GlobalStyledWithImage"
