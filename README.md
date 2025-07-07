@@ -16,44 +16,68 @@ Aplicativo feito com React + TypeScript + Vite que consome a API do OpenWeather 
 
 - ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-OpenWeather API
+- OpenWeather
 
 - <img src="https://img.shields.io/badge/Unsplash-000000.svg?style=for-the-badge&logo=Unsplash&logoColor=white" alt="unsplash-badge"/>
 
-🎨 Demonstração do Projeto
+## 🎨 Demonstração do Projeto
 
 ![Image01](./public/imgs/Img(01).png)
 
-
+<hr/>
 
 ![Image02](./public/imgs/Img(02).png)
 
-
+<hr/>
 
 ![Image03](./public/imgs/Img(03).png)
 
+<hr/>
 
 ![weather-time.gif](./public//imgs//weather-time.gif)
 
 
+## ⚙️ Como executar o projeto
 
-⚙️ Como executar o projeto
+### Instale as dependências
 
-# Instale as dependências
-npm install
+- Node.js
+- npm ou yarn
 
-# Execute o projeto em modo de desenvolvimento
-npm run dev
+### Passos
 
-📂 Variáveis de ambiente
+1. Clone o repositório:
+   ```bash
+   https://github.com/Filipe-Mamed/weather-time.git
 
-Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
+2. Navegue até o diretório do projeto: 
+    ```bash
+     cd weather-time
+    ```
+
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+   
+5. Inicie o projeto::
+    ```bash
+    npm run dev
+    ```
+
+## 📂 Variáveis de ambiente
+
+### Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
 
 VITE_API_KEY= SUA_CHAVE_OPENWEATHER
 VITE_UNSPLASH_KEY= SUA_CHAVE_UNSPLASH
 VITE_BASE_URL=https://api.openweathermap.org/data/2.5/weather
 VITE_UNSPLASH_URL=https://api.unsplash.com/search/photos
 
-📄 Sobre
+## 📄 Sobre
 
 Projeto desenvolvido para fins de aprendizado com foco em consumo de APIs externas e práticas com React e TypeScript.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
