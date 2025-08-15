@@ -1,27 +1,38 @@
-// import { FaCloud } from "react-icons/fa6";
-import {$ImagemIcon} from "./Img.Styled"
+import { Box, Text, Image } from "@chakra-ui/react";
 
 interface Props {
   temp: number;
   description: string;
-  icon: string
+  icon: string;
 }
 
-export function _TemperatureDisplay({ temp, description, icon }: Props) {
+export function TemperatureDisplay({ temp, description, icon }: Props) {
   const capitalize = (str: string) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
 
   return (
-    <>
-      <div className="text-center mt-4">
-        <span className="fs-5 fw-bold">Temperatura {Math.round(temp)}°C</span>
-      </div>
-      <div className="text-center mt-3">
-        <p className="fs-5 fw-medium">
-          {capitalize(description)} <$ImagemIcon src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="Ícone do clima" />
-        </p>
-      </div>
-    </>
+    <Box textAlign="center" mt={4}>
+      <Text fontSize="lg" fontWeight="bold">
+        Temperatura {Math.round(temp)}°C
+      </Text>
+      <Box mt={3}>
+        <Text
+          fontSize="lg"
+          fontWeight="medium"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          {capitalize(description)}{" "}
+          <Image
+            src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+            alt="Ícone do clima"
+            boxSize={12}
+            ml={2}
+          />
+        </Text>
+      </Box>
+    </Box>
   );
 }
