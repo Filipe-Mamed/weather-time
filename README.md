@@ -69,10 +69,19 @@ Aplicativo feito com React + TypeScript + Vite que consome a API do OpenWeather 
 
 ### Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
 
-VITE_API_KEY= SUA_CHAVE_OPENWEATHER
-VITE_UNSPLASH_KEY= SUA_CHAVE_UNSPLASH
-VITE_BASE_URL=https://api.openweathermap.org/data/2.5/weather
-VITE_UNSPLASH_URL=https://api.unsplash.com/search/photos
+```bash
+# OpenWeather
+VITE_BASE_URL_OPENWEATHER=SUA_CHAVE_OPENWEATHER
+
+VITE_API_KEY_OPENWEATHER=URL_DA_OPENWEATHER
+
+# Unsplash
+VITE_BASE_URL_UNSPLASH=SUA_CHAVE_UNSPLASH
+
+VITE_API_KEY_UNSPLASH=URL_DA_UNSPLASH
+
+```
+
 
 ## 📄 Sobre
 
