@@ -1,4 +1,4 @@
-import { Stack } from "react-bootstrap";
+import { HStack, Text, Image } from "@chakra-ui/react";
 
 interface Props{
   city: string
@@ -6,19 +6,19 @@ interface Props{
 }
 
 import { FaLocationDot } from "react-icons/fa6";
-export function _LocationInfo({city, country}: Props) {
+export function LocationInfo({city, country}: Props) {
   return (
     <>
-      <Stack
-        direction="horizontal"
-        gap={3}
-        className="justify-content-center mt-3"
+      <HStack
+         gap={3}
+         justify="center"
+         mt={3}
       >
-        <span className="fs-3 fw-bolder">
-          <FaLocationDot className="text-warning mb-1" /> {city}
-        </span>
-        <img src={`https://flagsapi.com/${country}/flat/48.png`} alt={`Bandeira de ${country}`} />
-      </Stack>
+        <Text fontSize="2xl" fontWeight="bold" display="flex" alignItems="center">
+          <FaLocationDot color="#f6e05e" style={{ marginBottom: "2px", marginRight: "4px" }} /> {city}
+        </Text>
+        <Image src={`https://flagsapi.com/${country}/flat/48.png`} alt={`Bandeira de ${country}`} />
+      </HStack>
     </>
   );
 }

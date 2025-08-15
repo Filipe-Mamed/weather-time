@@ -1,7 +1,17 @@
-import { $GlobalStyled } from "../../../global.styled"; // ajuste o caminho se necessário
+import type React from "react";
+import { GlobalWrapper } from "../../../global.styled"; // ajuste o caminho se necessário
 import { useBackground } from "../../hooks"; // ajuste o caminho se necessário
 
-export function GlobalStyledWithImage() {
+interface GlobalStyledWithImageProps {
+  children?: React.ReactNode;
+}
+
+
+export function GlobalStyledWithImage({children}: GlobalStyledWithImageProps) {
   const { backgroundImage } = useBackground();
-  return <$GlobalStyled backgroundImage={backgroundImage} />;
+  return(
+    <GlobalWrapper backgroundImage={backgroundImage}>
+      {children}
+    </GlobalWrapper>
+  )
 }

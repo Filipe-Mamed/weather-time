@@ -1,4 +1,4 @@
-import { Stack } from "react-bootstrap";
+import { Box, HStack, Text,} from "@chakra-ui/react";
 
 import { WiHumidity } from "react-icons/wi";
 import { FaWind } from "react-icons/fa6";
@@ -8,22 +8,24 @@ interface Props{
   windSpeed: number
 }
 
-export function _WeatherDetails({humidity, windSpeed}: Props) {
+export function WeatherDetails({humidity, windSpeed}: Props) {
   return (
     <>
-      <Stack
-        direction="horizontal"
+      <HStack
         gap={3}
-        className="justify-content-center me-5 fw-semibold"
+        justify="center"
+        me={5}
+        fontWeight="bold"
+        mb={2}
       >
-        <p>
-          Umidade <WiHumidity /> {humidity}%
-        </p>
-        <div className="vr mb-2"></div>
-        <p>
-          <FaWind /> {windSpeed}km/h
-        </p>
-      </Stack>
+        <Text display="flex" alignItems="center">
+          Umidade <WiHumidity style={{ marginLeft: "4px", marginRight: "4px" }} /> {humidity}%
+        </Text>
+        <Box divideX="2px"></Box>
+        <Text display="flex" alignItems="center">
+          <FaWind style={{ marginRight: "4px" }} /> {windSpeed}km/h
+        </Text>
+      </HStack>
     </>
   );
 }
