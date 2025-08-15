@@ -4,13 +4,13 @@ Aplicativo feito com React + TypeScript + Vite que consome a API do OpenWeather 
 
 ## Updates / Atualizações
 
-### v2.0.0 - 15/08/2025
+### v2.0.0 - 14/08/2025
 - Implementado fundo dinâmico no Weather Time usando Chakra UI
 - Correção do problema de input com `hasError`
 - Melhorias visuais no formulário de busca
 - Ajustes no layout responsivo com Chakra UI
 
-### v1.0.0 - 07/10/2025
+### v1.0.0 - 07/07/2025
 - Primeira versão estável do projeto
 
 ## 🌍 Tecnologias Utilizadas
