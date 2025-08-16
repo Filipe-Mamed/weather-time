@@ -108,6 +108,11 @@ Aplicativo feito com React + TypeScript + Vite que consome a API do OpenWeather 
 
 Projeto desenvolvido para fins de aprendizado com foco em consumo de APIs externas e práticas com React/Node.js e TypeScript.
 
+## 🌐 Website
+
+Acesse o projeto online: [Clima Agora](https://clima-agora-hazel.vercel.app)
+
+
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
