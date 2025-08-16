@@ -1,8 +1,4 @@
-import axios from "axios";
-
-const OPENWEATHER_API_KEY = import.meta.env.VITE_API_KEY_OPENWEATHER;
-
-const OPENWEATHER_BASE_URL = import.meta.env.VITE_BASE_URL_OPENWEATHER;
+import { backendAPI } from "./backendApi";
 
 export interface WeatherData {
   name: string;
@@ -23,13 +19,8 @@ export interface WeatherData {
 }
 
 export async function fetchWeather(city: string): Promise<WeatherData> {
-  const response = await axios.get(OPENWEATHER_BASE_URL, {
-    params: {
-      q: city,
-      appid: OPENWEATHER_API_KEY,
-      units: "metric",
-      lang: "pt_br",
-    },
+  const response = await backendAPI.get("/weather", {
+    params: { city },
   });
 
   return response.data;

@@ -36,11 +36,16 @@ export function WeatherTime() {
         setWeather(data);
 
         const images = await fetchCityImages(city);
-        if (images.length > 0) {
+        if (images && images.length > 0) {
           const randomIndex = Math.floor(Math.random() * images.length);
           const imageUrl = images[randomIndex].urls.regular;
-
-          setBackgroundImage(imageUrl);
+          if (imageUrl) {
+            setBackgroundImage(imageUrl);
+          } else {
+            setBackgroundImage(null);
+          }
+        } else {
+          setBackgroundImage(null);
         }
       } catch (error) {
         setWeather(null);
@@ -78,7 +83,7 @@ export function WeatherTime() {
 
         {weather ? (
           <>
-            <Box divideX="2px" my={4} divideColor="teal.100"></Box>
+            <Box height="1px" bg="teal.100" my={4}></Box>
             <LocationInfo city={weather.name} country={weather.sys.country} />
             <TemperatureDisplay
               temp={weather.main.temp}
