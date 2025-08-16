@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes)
 
 
-const port = process.env.PORT
+const port = process.env.PORT || 3333
 
 app.listen(port, () => {
   console.log(chalk.green(`🚀 Servidor rodando em http://localhost:${port}`));
