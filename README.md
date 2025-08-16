@@ -4,48 +4,65 @@ Aplicativo feito com React + TypeScript + Vite que consome a API do OpenWeather 
 
 ## Updates / Atualizações
 
-### v2.0.0 - 14/08/2025
-- Implementado fundo dinâmico no Weather Time usando Chakra UI
+### v2.0.0 - 15/08/2025
+
+- Implementado backend próprio em Node.js com Express
+- Fundo dinâmico usando Chakra UI
 - Correção do problema de input com `hasError`
 - Melhorias visuais no formulário de busca
 - Ajustes no layout responsivo com Chakra UI
 
 ### v1.0.0 - 07/07/2025
-- Primeira versão estável do projeto
+
+- Primeira versão estável do projeto (Frontend apenas)
 
 ## 🌍 Tecnologias Utilizadas
 
-- **React**
+### **Frontend**
 
-- **Vite**
+- React
 
-- **TypeScript**
+- Vite
 
-- **Axios**
+- TypeScript
 
-- **Chakra UI**
+- Axios
 
-- **OpenWeather**
+- Chakra UI
 
-- **Unsplash**
+### **Backend**
 
+- Node.js
+
+- TypeScript
+
+- Express
+
+- Axios
+
+- Dotenv
+
+### **APIs Externas**
+
+- OpenWeather
+
+- Unsplash
 
 ## 🎨 Demonstração do Projeto
 
-![Image01](./public/imgs/Img(01).png)
+![Image01](<./assets//Img(01).png>)
 
 <hr/>
 
-![Image02](./public/imgs/Img(02).png)
+![Image02](<./assets/Img(02).png>)
 
 <hr/>
 
-![Image03](./public/imgs/Img(03).png)
+![Image03](<./assets//Img(03).png>)
 
 <hr/>
 
-![weather-time.gif](./public//imgs//weather-time.gif)
-
+![weather-time.gif](./assets/weather-time.gif)
 
 ## ⚙️ Como executar o projeto
 
@@ -57,45 +74,39 @@ Aplicativo feito com React + TypeScript + Vite que consome a API do OpenWeather 
 ### Passos
 
 1. Clone o repositório:
+
    ```bash
    https://github.com/Filipe-Mamed/weather-time.git
    ```
 
-2. Navegue até o diretório do projeto: 
+2. Backend:
     ```bash
-     cd weather-time
-    ```
+    # Navegue até a pasta do backend
+    cd backend 
 
-3. Instale as dependências:
+    # Instale as dependências do backend
+    npm install 
+   ```
+
+3. Frontend:
    ```bash
+   # Navegue até a pasta do frontend
+   cd frontend
+
+   # Instale as dependências do frontend
    npm install
    ```
-   
-5. Inicie o projeto::
-    ```bash
-    npm run dev
-    ```
 
 ## 📂 Variáveis de ambiente
 
-### Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
+> ⚠️ **Observação:**  
+> Para ver quais variáveis de ambiente são necessárias, abra o arquivo `.env.example` na pasta **frontend** ou **backend**.
 
-```bash
-# OpenWeather
-VITE_BASE_URL_OPENWEATHER=SUA_CHAVE_OPENWEATHER
-
-VITE_API_KEY_OPENWEATHER=URL_DA_OPENWEATHER
-
-# Unsplash
-VITE_BASE_URL_UNSPLASH=SUA_CHAVE_UNSPLASH
-
-VITE_API_KEY_UNSPLASH=URL_DA_UNSPLASH
-```
-
+---
 
 ## 📄 Sobre
 
-Projeto desenvolvido para fins de aprendizado com foco em consumo de APIs externas e práticas com React e TypeScript.
+Projeto desenvolvido para fins de aprendizado com foco em consumo de APIs externas e práticas com React/Node.js e TypeScript.
 
 ## Licença
 
