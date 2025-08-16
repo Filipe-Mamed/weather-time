@@ -10,7 +10,13 @@ export class UnsplashController {
       const data = await getUnsplash(city);
       res.status(HttpStatus.OK_200).json(data);
     } catch (error: any) {
-      console.log((chalk.red({ message: `Houve um erro ao buscar imagens ${error.message}` })))
+      // Mostra o erro detalhado no terminal
+      console.log(chalk.red(JSON.stringify(error, null, 2)));
+      console.log(
+        chalk.red({
+          message: `Houve um erro ao buscar imagens ${error.message}`,
+        })
+      );
       res
         .status(HttpStatus.INTERNAL_SERVER_ERROR_500)
         .json({ message: "Houve um erro ao buscar imagens" });

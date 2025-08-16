@@ -10,6 +10,8 @@ export class WeatherController {
       const data = await getWeather(city);
       res.status(HttpStatus.OK_200).json(data);
     } catch (error: any) {
+      // Mostra o erro detalhado no terminal
+      console.log(chalk.red(JSON.stringify(error, null, 2)));
       console.log(
         chalk.red({
           message: `Houve um erro ao buscar os dados meteorológicos ${error.message}`,
