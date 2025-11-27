@@ -52,14 +52,14 @@ export function SearchForm({ city, onChange, onSubmit, hasError }: Props) {
         </Box>
         <Button
           type="submit"
-          bg="gray.100"
+          bg="white"
           color="black"
           p={4}
           borderRadius="md"
           h="45px"
-          border="2px solid #71717a"
+          border="2px solid #d4d4d8"
           _hover={{
-            bg: "gray.200",
+            bg: "gray.100",
           }}
         >
           <IoIosSearch size={25} />
