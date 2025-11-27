@@ -2,19 +2,29 @@
 
 Aplicativo feito com React + TypeScript + Vite que consome a API do OpenWeather para exibir o clima de uma cidade e usa a API do Unsplash para exibir uma imagem de fundo relacionada à cidade pesquisada.
 
-## Updates / Atualizações
+## 🔄 Updates / Atualizações
+
+### v2.1.0 - 26/11/2025
+
+- Componente Toast para exibição de notificações.
+- Feedback visual de carregamento ao buscar cidade (com Spinner).
+- Estilos do botão de busca para melhor contraste e visibilidade.
+- Melhorias internas no código para organização e manutenção.
+- Dependências do projeto atualizadas para versões mais recentes.
 
 ### v2.0.0 - 15/08/2025
 
 - Implementado backend próprio em Node.js com Express
 - Fundo dinâmico usando Chakra UI
-- Correção do problema de input com `hasError`
+- Correção do problema de input com __hasError__
 - Melhorias visuais no formulário de busca
 - Ajustes no layout responsivo com Chakra UI
 
 ### v1.0.0 - 07/07/2025
 
 - Primeira versão estável do projeto (Frontend apenas)
+
+---
 
 ## 🌍 Tecnologias Utilizadas
 
