@@ -10,6 +10,8 @@ import {
 } from "../../shared/services/api/weatherApi";
 import { fetchCityImages } from "../../shared/services/api/unsplashApi";
 import { useBackground } from "../../shared/hooks";
+import { Toast } from "@/shared/components/Toast";
+import { toaster } from "@/components/ui/toaster";
 
 export function WeatherTime() {
   const [city, setCity] = useState("");
@@ -31,9 +33,18 @@ export function WeatherTime() {
     async (e: React.FormEvent) => {
       e.preventDefault();
       setError(null);
+
+      const loadingToastId = Toast({
+        title: "Buscando cidade...",
+        type: "loading",
+        duration: Infinity,
+      });
+
       try {
         const data = await fetchWeather(city);
         setWeather(data);
+
+        toaster.dismiss(loadingToastId);
 
         const images = await fetchCityImages(city);
         if (images && images.length > 0) {
@@ -47,12 +58,12 @@ export function WeatherTime() {
         } else {
           setBackgroundImage(null);
         }
-      } catch (error) {
+      } catch {
         setWeather(null);
         setError("Cidade não encontrada");
         setIsInputError(true);
         setBackgroundImage(null);
-        console.log(error);
+        toaster.dismiss(loadingToastId);
       }
     },
     [city, setBackgroundImage]

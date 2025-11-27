@@ -17,7 +17,6 @@ app.use(
 
 // Configuração do .json
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 
 // Rotas
