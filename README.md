@@ -80,15 +80,17 @@ Aplicativo feito com React + TypeScript + Vite que consome a API do OpenWeather 
    ```
 
 2. Backend:
-    ```bash
-    # Navegue até a pasta do backend
-    cd backend 
 
-    # Instale as dependências do backend
-    npm install 
+   ```bash
+   # Navegue até a pasta do backend
+   cd backend
+
+   # Instale as dependências do backend
+   npm install
    ```
 
 3. Frontend:
+
    ```bash
    # Navegue até a pasta do frontend
    cd frontend
@@ -111,7 +113,6 @@ Projeto desenvolvido para fins de aprendizado com foco em consumo de APIs extern
 ## 🌐 Website
 
 Acesse o projeto online: [Clima Agora](https://clima-agora-hazel.vercel.app)
-
 
 ## Licença
 
